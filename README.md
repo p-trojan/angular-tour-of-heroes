@@ -12,3 +12,6 @@ To run this project on localhost with backend of any kind CORS has to be enabled
 This is done by adding `proxy.conf.json` to `src` folder and editing `angular.json`. I followed these instructions: https://medium.com/weekly-webtips/do-you-know-how-to-resolve-cors-issues-in-angular-9d818474825f
 
 To connect to backend app, just remove/comment `InMemoryDatabase` from `app.module.ts`. 
+
+
+### Backend app: https://github.com/p-trojan/akka-tour-of-heroes
