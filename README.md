@@ -2,7 +2,7 @@
 
 This is a copy of Part 6 of Angular tutorial - Tour of Heroes (https://angular.io/tutorial/tour-of-heroes/toh-pt6)
 
-I am using this project only as for learning purposes, I needed something that has simple domain and REST API. This is sufficient to serve as a base for developing backend app in Scala.
+I am using this project only for learning purposes, I needed something that has simple domain and REST API. This is sufficient to serve as a base for developing backend app in Scala.
 
 I am using node 16.13.0 and npm 8.1.0. 
 
@@ -14,4 +14,4 @@ This is done by adding `proxy.conf.json` to `src` folder and editing `angular.js
 To connect to backend app, just remove/comment `InMemoryDatabase` from `app.module.ts`. 
 
 
-### Backend app: https://github.com/p-trojan/akka-tour-of-heroes
+#### Backend app: https://github.com/p-trojan/akka-tour-of-heroes
