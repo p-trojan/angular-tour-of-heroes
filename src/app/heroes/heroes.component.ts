@@ -22,13 +22,15 @@ export class HeroesComponent implements OnInit {
     .subscribe(heroes => this.heroes = heroes);
   }
 
-  add(name: string): void {
-    name = name.trim();
-    if (!name) { return; }
-    this.heroService.addHero({ name } as Hero)
+  add(heroName: string): void {
+    heroName = heroName.trim();
+    var heroId = this.genId(this.heroes);
+    if (!heroName) { return; }
+    this.heroService.addHero({ id: heroId, name: heroName } as Hero)
       .subscribe(hero => {
         this.heroes.push(hero);
-      });
+        this.getHeroes();
+    });
   }
 
   delete(hero: Hero): void {
@@ -36,4 +38,7 @@ export class HeroesComponent implements OnInit {
     this.heroService.deleteHero(hero.id).subscribe();
   }
 
+  private genId(heroes: Hero[]): number {
+    return heroes.length > 0 ? Math.max(...heroes.map(hero => hero.id)) + 1 : 11;
+  }
 }
